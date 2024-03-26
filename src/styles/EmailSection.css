@@ -1,0 +1,7 @@
+.OutLineLbael:focus,
+.OutLineLbael:focus-within {
+  box-shadow: none;
+  outline-style: solid;
+  outline-width: 0px;
+  outline-offset: 0px;
+}

@@ -1,0 +1,145 @@
+.AnimationBox:before {
+  background-color: #000;
+  content: "";
+  height: 320px;
+  width: 384px;
+  position: absolute;
+  transition: all 0.2s;
+  transition-delay: 0.2s;
+  transform: translateY(0px) translateX(0px);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.AnimationBox:after {
+  background-color: #d1701f;
+  content: "";
+  height: 320px;
+  width: 384px;
+  position: absolute;
+  transition: all 0.2s;
+  transition-delay: 0.2s;
+  transform: translateY(0px) translateX(0px);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.ProjectCards:hover {
+  animation-name: ScaleAnimation;
+  animation-duration: 0.4s;
+}
+
+.ProjectCards:hover .AnimationBox:before {
+  animation: slick-hover-2 3s 0.4s linear infinite;
+  transform: translateY(-20px) translateX(-20px);
+}
+
+.ProjectCards:hover .AnimationBox:after {
+  animation: slick-hover 3s 0.4s linear infinite reverse;
+  transform: translateY(20px) translateX(20px);
+}
+
+@keyframes ScaleAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(1.05);
+  }
+
+  66% {
+    transform: scale(0.9);
+  }
+
+  90% {
+    transform: scale(1 Q);
+  }
+}
+
+@keyframes slick-hover {
+  0.00% {
+    transform: translateY(20px) translateX(20px);
+  }
+
+  16.67% {
+    transform: translateY(-13px) translateX(-9px);
+  }
+
+  33.33% {
+    transform: translateY(4px) translateX(12px);
+  }
+
+  50.00% {
+    transform: translateY(20px) translateX(-20px);
+  }
+
+  66.67% {
+    transform: translateY(-3px) translateX(8px);
+  }
+
+  83.33% {
+    transform: translateY(-15px) translateX(-11px);
+  }
+
+  100.00% {
+    transform: translateY(20px) translateX(20px);
+  }
+}
+
+@keyframes slick-hover-2 {
+  0.00% {
+    transform: translateY(-20px) translateX(-20px);
+  }
+
+  16.67% {
+    transform: translateY(3px) translateX(-5px);
+  }
+
+  33.33% {
+    transform: translateY(18px) translateX(-10px);
+  }
+
+  50.00% {
+    transform: translateY(-20px) translateX(20px);
+  }
+
+  66.67% {
+    transform: translateY(15px) translateX(-4px);
+  }
+
+  83.33% {
+    transform: translateY(-1px) translateX(15px);
+  }
+
+  100.00% {
+    transform: translateY(-20px) translateX(-20px);
+  }
+}
+
+.Content {
+  z-index: 2;
+  opacity: 0;
+  font-size: 23px;
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #000;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transition-delay: 0.7s;
+}
+
+.ProjectCards:hover .Content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Content h3 {
+  font-size: 20px;
+  color: #000;
+}
+
+.Content span {
+  color: #000;
+}

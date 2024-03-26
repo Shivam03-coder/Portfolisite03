@@ -1,0 +1,94 @@
+.VideoSection {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../assets/img/hero/1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.OverlayContent {
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
+}
+
+
+/* VIDEO PLAY BUTTON */
+
+
+.VideoPlayButton {
+  text-decoration: none;
+  border: 2px dotted white;
+  color: aliceblue;
+  border-radius: 50%;
+  padding: 15px;
+  position: relative;
+}
+
+.VideoPlayButton::after {
+  position: absolute;
+  content: "";
+  bottom: -7px;
+  top: -7px;
+  left: -7px;
+  right: -7px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin: 0px;
+  opacity: 1;
+  transform-origin: center;
+  animation: anim 800ms linear infinite;
+}
+
+.VideoPlayButton::before {
+  position: absolute;
+  content: "";
+  bottom: -7px;
+  top: -7px;
+  left: -7px;
+  right: -7px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin: 0px;
+  opacity: 0.8;
+  transform-origin: center;
+  animation: anim 800ms linear 400ms infinite;
+}
+
+@keyframes anim {
+  from {
+    margin: 0px;
+    opacity: 1;
+  }
+
+  to {
+    margin: -15px;
+    opacity: 0;
+  }
+}
+
+/* OUTLINE BUTTON */
+
+.outline {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  border-style: solid;
+  border-radius: 21px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+.outline:hover {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  background: #ffffff;
+  border-color: white;
+  transition: all 0.2s linear;
+}

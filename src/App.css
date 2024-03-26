@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@layer {
+  .SvgAbout {
+    position: absolute;
+    right: 10%;
+    top: 85%;
+    color: rgba(173, 51, 51, 0.06);
+  }
+}
+@tailwind utilities;
+
+@layer utilities {
+  .SpinAnimation {
+    animation: spin 10s linear infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.PageLayout {
+  @apply w-[80%] mx-auto grid md:grid-cols-2 gap-12 py-16;
+}
+
+.ItemsCenter {
+  @apply flex flex-row justify-center items-center gap-7;
+}
+
+.RoundedShadow {
+  @apply rounded-full shadow-Rx p-3 cursor-pointer;
+}
+
+.OutLineNone:focus {
+  @apply outline-0 outline-offset-0;
+}
+
+.Border {
+  @apply border-spacing-1 border-solid border-black;
+}
+
+.Titlesection {
+  @apply w-[88%] mx-auto my-12 p-5 text-lg font-semibold font-Poppins;
+}
+
+.ItemsHorizontalCenter {
+  @apply flex justify-center;
+}
+.ModalBoxButtonsTop {
+  @apply flex justify-center flex-col-reverse gap-5;
+}
+.ItemsVerticalCenter {
+  @apply flex items-center;
+}
+
+.Center {
+  @apply flex justify-center items-center;
+}
+
+.Border1 {
+  @apply border border-white;
+}
+
+.ServiceCards {
+  @apply size-40 mx-auto shadow-Rx rounded-box;
+}
+
+.NavLinks {
+  @apply text-xl cursor-pointer md:ml-8 md:my-0 my-7 font-semibold transition-all duration-500;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
